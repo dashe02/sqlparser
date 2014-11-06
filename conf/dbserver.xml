@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dbServers>
+    <dbServer id="server1">
+        <ip>127.0.0.1</ip>
+        <port>3306</port>
+    </dbServer>
+     <dbServer id="server2">
+         <ip>192.168.100.38</ip>
+         <port>3306</port>
+     </dbServer>
+</dbServers>

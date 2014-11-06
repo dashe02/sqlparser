@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <rule db="server1,server2">
+        <schema name="user" tableName="user,image_upload,employee，employee_employeerole...">
+            <parameter>appId</parameter>
+            <expression>
+                <![CDATA[
+               var division=appId%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+        <schema name="authority" tableName="authority,user_authority,authority_power">
+            <parameter>authorityId</parameter>
+            <expression>
+                <![CDATA[
+               var division=authorityId%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+        <schema name="power" tableName="power">
+            <parameter>ID</parameter>
+            <expression>
+                <![CDATA[
+               var division=ID%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+        <schema name="menu" tableName="menu，authority_menu">
+            <parameter>menuId</parameter>
+            <expression>
+                <![CDATA[
+               var division=menuId%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+        <schema name="exception" tableName="exception">
+            <parameter>ID</parameter>
+            <expression>
+                <![CDATA[
+               var division=ID%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+        <schema name="inspectRecord" tableName="inspecttablerecord,inspectitemrecord">
+            <parameter>appId</parameter>
+            <expression>
+                <![CDATA[
+               var division=appId%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+    </rule>
+    <rule db="server3">
+        <schema name="test" tableName="test">
+            <parameter>tId</parameter>
+            <expression>
+                <![CDATA[
+               var division=tId%2;
+               case division when 0 then 'server1';
+               when 1 then 'server2';
+               end case;
+               ]]>
+            </expression>
+        </schema>
+    </rule>
+</rules>
